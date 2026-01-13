@@ -33,19 +33,14 @@
     --btn-lg-padding-y: 1rem;
 
     --btn-bg-color: #c2c2c2;
-    --btn-bg-color-hover: #929292;
     --btn-color: #1e1e1e;
     --btn-primary-bg-color: #007bff;
-    --btn-primary-bg-color-hover: #0069d9;
     --btn-primary-color: #fff;
     --btn-danger-bg-color: #dc3545;
-    --btn-danger-bg-color-hover: #c82333;
     --btn-danger-color: #fff;
     --btn-warning-bg-color: #ffc107;
-    --btn-warning-bg-color-hover: #e0a800;
     --btn-warning-color: #212529;
     --btn-success-bg-color: #28a745;
-    --btn-success-bg-color-hover: #218838;
     --btn-success-color: #fff;
 
     --btn-lg-font-size: 1.2rem;

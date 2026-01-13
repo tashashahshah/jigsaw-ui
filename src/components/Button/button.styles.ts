@@ -28,8 +28,11 @@ export default css`
         padding: var(--btn-padding-y) var(--btn-padding-x);
         transition: all .3s ease;
 
-        &:hover {
-            background-color: var(--btn-bg-color-hover);
+        &:hover,
+        &:focus-visible {
+            /* we do not set a var for hover colour in product
+               if the theme doesn't have a var for it, the fall back will kick in and just darken the current button colour */
+            background-color: var(--btn-bg-color-hover, color-mix(in srgb, var(--btn-bg-color) 80%, black 20%));
         }
     }
 
@@ -39,48 +42,27 @@ export default css`
     }
 
     .btn--primary {
-        background-color: var(--btn-primary-bg-color);
+        --btn-bg-color: var(--btn-primary-bg-color);
+        --btn-bg-color-hover: var(--btn-primary-bg-color-hover);
         color: var(--btn-primary-color);
-
-        &:hover {
-            background-color: var(--btn-primary-bg-color-hover);
-        }
     }
 
     .btn--danger {
-        background-color: var(--btn-danger-bg-color);
+        --btn-bg-color: var(--btn-danger-bg-color);
+        --btn-bg-color-hover: var(--btn-danger-bg-color-hover);
         color: var(--btn-danger-color);
-
-        &:hover {
-            background-color: var(--btn-danger-bg-color-hover);
-        }
     }
 
     .btn--warning {
-        background-color: var(--btn-warning-bg-color);
+        --btn-bg-color: var(--btn-warning-bg-color);
+        --btn-bg-color-hover: var(--btn-warning-bg-color-hover);
         color: var(--btn-warning-color);
-
-        &:hover {
-            background-color: var(--btn-warning-bg-color-hover);
-        }
-    }
-
-    .btn--danger {
-        background-color: var(--btn-danger-bg-color);
-        color: var(--btn-danger-color);
-
-        &:hover {
-            background-color: var(--btn-danger-bg-color-hover);
-        }
     }
 
     .btn--success {
-        background-color: var(--btn-success-bg-color);
+        --btn-bg-color: var(--btn-success-bg-color);
+        --btn-bg-color-hover: var(--btn-success-bg-color-hover);
         color: var(--btn-success-color);
-
-        &:hover {
-            background-color: var(--btn-success-bg-color-hover);
-        }
     }
 
     .btn--lg,
