@@ -1,6 +1,6 @@
 :root {
     /* Neutrals */
-    --white: #fff;
+--white: #fff;
     --neutral-50: #fafbfc;
     --neutral-100: #f5f6fa;
     --neutral-150: #f0f1f5;
@@ -21,6 +21,35 @@
     --neutral-900: #212529;
     --neutral-950: #181a1b;
     --black: #000000;
+
+
+    /* Light theme - base is white  
+.light {  
+    --base: oklch(1 0 0);  
+    --base-50: oklch(from var(--base) 0.98 c h);  
+    --base-100: oklch(from var(--base) 0.95 c h);  
+     ... decreasing lightness   
+    --base-950: oklch(from var(--base) 0.03 c h);  
+}*/ 
+  
+/* Dark theme - base is black  
+.dark {  
+    --base: oklch(0 0 0);  
+    --base-50: oklch(from var(--base) 0.03 c h);  
+    --base-100: oklch(from var(--base) 0.06 c h);  
+    /* ... increasing lightness ...  
+    --base-950: oklch(from var(--base) 0.98 c h);  
+}  */ 
+/*or Use a mid-tone as base
+
+
+--base: oklch(0.5 0 0);   mid-gray  
+--base-50: oklch(from var(--base) calc(l + 0.48) c h);  /* → 0.98  
+--base-500: oklch(from var(--base) calc(l + 0.10) c h); /* → 0.60  
+--base-950: oklch(from var(--base) calc(l - 0.47) c h); /* → 0.03  
+  */
+
+
 
     /* Buttons */
     --btn-border-radius: 4px;
@@ -46,6 +75,15 @@
     --btn-lg-font-size: 1.2rem;
     --btn-sm-font-size: .875rem;
 
+
+    /* Button vars removed */
+    /* 
+    --btn-bg-color-hover: #929292;
+    --btn-primary-bg-color-hover: #0069d9;
+    --btn-danger-bg-color-hover: #c82333;
+    --btn-success-bg-color-hover: #218838;
+    */
+
     /* Avatar */
     --avatar-bg-color: #bcbcbc;    
     --avatar-color: #1f1f1f;
@@ -56,18 +94,19 @@
     --avatar-lg-size: 64px;
     --avatar-lg-font-size: 1.25rem;
 
-    /* Card */
+    /* Card - could all be defined in componenent styles 
     --card-border-radius: 8px;
     --card-box-shadow: none;
     --card-box-shadow-hover: 0 4px 6px rgba(0, 0, 0, .1);
     --card-bg-color: var(--component-bg);
     --card-color: var(--component-color);
     --card-border: var(--component-border);
-
-    /* List View */
-    --list-view-bg-color: var(--component-bg);
+    
+*/
+    /* List View  - could all be defined in componenent styles */
+    /* --list-view-bg-color: var(--component-bg);
     --list-view-border: var(--component-border);
-    --list-view-color: var(--component-color);
+    --list-view-color: var(--component-color); */
 
     /* States */
     --primary: #007bff;
@@ -89,6 +128,7 @@
     --border: 1px solid var(--neutral-300);
     --border-subtle: 1px solid var(--neutral-200);
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 4px 6px rgba(0, 0, 0, .1);
 
     /* Layer 1  */
     --bg-color-l1: var(--neutral-200);
@@ -100,7 +140,7 @@
     --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.08);
 
     /* Layer 2  */
-    --bg-color-l2: var(--white);
+    --bg-color-l2: var(--neutral);
     --color-l2: var(--neutral-900);
     --color-l2-subtle: var(--neutral-650);
     --color-l2-muted: var(--neutral-550);
@@ -140,9 +180,17 @@
     padding: 0;
 }
 
+.theme-light {
+    --theme: light;
+}
+
 .theme-dark {
+    --theme: dark;
+
+    --neutral: oklch(0 0 0);
+
     --bg-color: var(--neutral-950);
-    --color: var(--white);
+    --color: var(--neutral);
     --color-subtle: var(--neutral-400);
     --color-muted: var(--neutral-500);
     --border: 1px solid var(--neutral-750);
@@ -150,7 +198,7 @@
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
     --bg-color-l1: var(--neutral-900);
-    --color-l1: var(--white);
+    --color-l1: var(--neutral);
     --color-l1-subtle: var(--neutral-400);
     --color-l1-muted: var(--neutral-500);
     --border-l1: 1px solid var(--neutral-700);
@@ -158,7 +206,7 @@
     --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.4);
 
     --bg-color-l2: var(--neutral-800);
-    --color-l2: var(--white);
+    --color-l2: var(--neutral);
     --color-l2-subtle: var(--neutral-350);
     --color-l2-muted: var(--neutral-450);
     --border-l2: 1px solid var(--neutral-650);
@@ -166,7 +214,7 @@
     --shadow-l2: 0 4px 12px rgba(0, 0, 0, 0.5);
 
     --bg-color-l3: var(--neutral-700);
-    --color-l3: var(--white);
+    --color-l3: var(--neutral);
     --color-l3-subtle: var(--neutral-350);
     --color-l3-muted: var(--neutral-450);
     --border-l3: 1px solid var(--neutral-600);
@@ -188,7 +236,7 @@
     --border-subtle: 1px solid var(--neutral-250);
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 
-    --bg-color-l1: var(--white);
+    --bg-color-l1: var(--neutral);
     --color-l1: var(--neutral-800);
     --color-l1-subtle: var(--neutral-600);
     --color-l1-muted: var(--neutral-500);
@@ -251,10 +299,10 @@
     --border-l3-subtle: 1px solid #880088;
     --shadow-l3: 0 8px 16px rgba(153, 0, 153, 0.6);
 
-    --component-bg-hover: var(--bg-color-l2);
+    /* --component-bg-hover: var(--bg-color-l2);
     --component-bg-active: var(--bg-color-l3);
     --interactive-bg-hover: var(--bg-color-l2);
-    --interactive-bg-active: var(--bg-color-l3);
+    --interactive-bg-active: var(--bg-color-l3); */
 }
 
 .layer-1 {
@@ -526,7 +574,7 @@ body {
 }
 
 .neutral-white {
-    background: var(--white); 
+    background: var(--neutral); 
 }
 
 .neutral-50 { 
@@ -606,5 +654,5 @@ body {
 }
 
 .black {
-    background: var(--black); 
+    background: var(--neutral-999); 
 }

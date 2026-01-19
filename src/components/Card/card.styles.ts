@@ -12,17 +12,30 @@ export default css`
         display: block;
     }
 
+    /*
+        --card-bg-color - theme can ovewrite, else we fall back to --bg-color-l1
+    */
+
+
     .card {
-        background-color: var(--card-bg-color, var(--component-bg, #f8f9fa));
-        border: var(--card-border, var(--component-border, 1px solid #dee2e6));
+        background-color: var(--card-bg-color, var(--bg-color-l1));
+        border: var(--card-border, var(--border-l1));
         border-radius: var(--card-border-radius, 8px);
-        box-shadow: var(--card-box-shadow, var(--component-shadow, none));
-        color: var(--card-color, var(--component-color, #343a40));
+        box-shadow: var(--card-box-shadow, none);
+        color: var(--card-color, var(--color-l1));
         overflow: hidden;
         transition: box-shadow .3s ease;
         
         /* Debug info overlay */
         position: relative;
+
+        @container style(--theme: light) {
+            --card-debug: 'Light theme card';  
+        }
+
+        @container style(--theme: dark) {
+            --card-debug: 'Dark theme card';  
+        }
     }
 
     .card__thumbnail {
@@ -55,7 +68,7 @@ export default css`
     }
     
     .card::before {
-        content: 'Component: ' var(--component-bg, 'MISS') ' | Card: ' var(--card-bg-color, 'MISS');
+        content:  var(--card-debug);  
         position: absolute;
         top: 5px;
         right: 5px;
@@ -75,6 +88,6 @@ export default css`
     }
 
     .card:hover {
-        box-shadow: var(--card-box-shadow-hover, 0 4px 6px rgba(0, 0, 0, .1));
+        box-shadow: var(--card-box-shadow-hover, var(--shadow-hover));
     }
 `;  

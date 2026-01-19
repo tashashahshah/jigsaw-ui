@@ -18,7 +18,7 @@
     let clearThemes = () => {
         const themeButtons = document.querySelectorAll('jg-button[data-theme]');
 
-        document.body.classList = '';
+        document.documentElement.classList = '';
 
         themeButtons.forEach(btn => {
             btn.removeAttribute('type');
@@ -32,7 +32,7 @@
      */
     let setTheme = (theme) => {
         clearThemes();
-        document.body.classList.add('theme-' + theme);
+        document.documentElement.classList.add('theme-' + theme);
         
         const activeButton = document.querySelector(`jg-button[data-theme="${theme}"]`);
         if (activeButton) {
@@ -132,9 +132,11 @@
      * Render List View
      * @return {void}
      */
+
+    // NS Notes:  removed layer1 class from demo__section--list-view
     let renderListView = () => {
         DOM.demoComponent.innerHTML = `
-            <div class="demo__section demo__section--list-view layer-1">
+            <div class="demo__section demo__section--list-view"> 
                 <h2 class="section__title">List View</h2>
                 <div class="showcase showcase--list">
                     <jg-list-view thumbnail="https://picsum.photos/50/50?random=1" header="Item 1" content="First item"> 
@@ -234,6 +236,101 @@
     renderPaletteView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--palette">
+                <h2 class="section__title">Palette</h2>
+                <div class="showcase">
+                    <div class="card palette-showcase" style="width: 100%;">
+                        <h2>Neutral Palette (0-1000)</h2>
+                        <div class="palette-grid">
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-white"></div>
+                                <div class="palette-label">White</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-50"></div>
+                                <div class="palette-label">neutral-50</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-100"></div>
+                                <div class="palette-label">neutral-100</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-150"></div>
+                                <div class="palette-label">neutral-150</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-200"></div>
+                                <div class="palette-label">neutral-200</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-250"></div>
+                                <div class="palette-label">neutral-250</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-300"></div>
+                                <div class="palette-label">neutral-300</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-350"></div>
+                                <div class="palette-label">neutral-350</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-400"></div>
+                                <div class="palette-label">neutral-400</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-450"></div>
+                                <div class="palette-label">neutral-450</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-500"></div>
+                                <div class="palette-label">neutral-500</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-550"></div>
+                                <div class="palette-label">neutral-550</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-600"></div>
+                                <div class="palette-label">neutral-600</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-650"></div>
+                                <div class="palette-label">neutral-650</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-700"></div>
+                                <div class="palette-label">neutral-700</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-750"></div>
+                                <div class="palette-label">neutral-750</div>
+                            </div>  
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-800"></div>
+                                <div class="palette-label">neutral-800</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-850"></div>
+                                <div class="palette-label">neutral-850</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-900"></div>
+                                <div class="palette-label">neutral-900</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-950"></div>
+                                <div class="palette-label">neutral-950</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color black"></div>
+                                <div class="palette-label">Black</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="demo__section demo__section--palette">
                 <h2 class="section__title">Palette</h2>
                 <div class="showcase">
                     <div class="card palette-showcase" style="width: 100%;">

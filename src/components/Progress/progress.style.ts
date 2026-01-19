@@ -9,7 +9,7 @@ export default css`
     }
 
     :host {
-        --progress-bar-bg-color: var(--component-bg, #e0e0e0);
+        --progress-bar-bg-color: var(--bg-color-l1);
         --progress-bar-color: #007bff;
         display: block;
         min-width: 200px;

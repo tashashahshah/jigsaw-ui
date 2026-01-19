@@ -14,14 +14,14 @@ export default css`
 
   .list-view {
     align-items: center;
-    background-color: var(--list-view-bg-color);
-    border: var(--list-view-border);
+    background-color: var(--list-view-bg-color, var(--bg-color-l1));
+    border: var(--list-view-border, var(--border-l1));
     border-radius: var(--list-view-border-radius, 8px);
-    color: var(--list-view-color);
+    color: var(--list-view-color, var(--color-l1));
     display: flex;
-    gap: var(--list-view-gap, 12px);
+    gap: var(--list-view-gap, 1rem);
     min-height: var(--list-view-min-height, 64px);
-    padding: var(--list-view-padding, 12px);
+    padding: var(--list-view-padding, 1rem);
     width: 100%;
   }
 
@@ -29,13 +29,15 @@ export default css`
     cursor: pointer;
   }
 
+  .list-view:hover,
   .list-view--clickable:hover {
-    background-color: var(--list-view-bg-color-hover, var(--interactive-bg-hover, #f8f9fa));
+    background-color: var(--list-view-bg-color-hover, color-mix(in srgb, var(--bg-color-l1) 100%, black 5%));
     box-shadow: var(--list-view-box-shadow-hover, 0 2px 4px rgba(0, 0, 0, 0.1));
   }
 
+  .list-view:active,
   .list-view--clickable:active {
-    background-color: var(--list-view-bg-color-active, var(--interactive-bg-active, #e9ecef));
+    background-color: var(--list-view-bg-color-active, var(--bg-color-l3));
   }
 
   .list-view__thumbnail {
@@ -44,12 +46,9 @@ export default css`
     height: var(--list-view-thumbnail-size, 48px);
     border-radius: var(--list-view-thumbnail-border-radius, 4px);
     overflow: hidden;
-
     display: flex;
-    
     align-items: center;
     background-color: var(--list-view-thumbnail-bg);
-
     justify-content: center;
   }
 
