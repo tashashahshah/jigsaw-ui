@@ -106,6 +106,7 @@
                     <jg-chip label="Default"></jg-chip>
                     <jg-chip label="Primary" type="primary"></jg-chip>
                     <jg-chip label="Success" type="success"></jg-chip>
+                    <jg-chip label="Warning" type="warning"></jg-chip>
                     <jg-chip label="Danger" type="danger"></jg-chip>
                 </div>  
             </div>

@@ -445,12 +445,30 @@
     --base-2:  oklch(from var(--base) 95%  calc(var(--c-base) + (sin(0.855 * pi) * c)) h);  
     --base-1: oklch(from var(--base) 100% calc(var(--c-base) + (sin(0.90 * pi) * c)) h);
 
-    .demo__component > .demo__section:first-child,
+    .demo__component > .demo__section--palette:first-child,
     .palette-swatch:has(.palette-color.base) {
         display: none;
     }
 
 }
+
+    jg-chip[type="danger"] { 
+        --state: danger; 
+    }
+
+    jg-chip[type="primary"] { 
+        --state: primary; 
+    }
+
+
+
+    jg-chip[type="warning"] { 
+        --state: warning; 
+    }
+
+    jg-chip[type="success"] { 
+        --state: success; 
+    }
 
 .layer-1 {
 

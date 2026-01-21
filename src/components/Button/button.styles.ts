@@ -32,7 +32,7 @@ export default css`
         &:focus-visible {
             /* we do not set a var for hover colour in product
                if the theme doesn't have a var for it, the fall back will kick in and just darken the current button colour */
-            background-color: var(--btn-bg-color-hover, color-mix(in srgb, var(--btn-bg-color) 80%, black 20%));
+            background-color: var(--btn-bg-color-hover, color-mix(in oklch, var(--btn-bg-color) 80%, black 20%));  
         }
     }
 

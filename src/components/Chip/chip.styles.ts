@@ -19,5 +19,21 @@ export default css`
         color: var(--chip-color, var(--color-l1));
         display: inline-block;
         padding: 6px 12px;
+
+         @container style(--state: primary) {
+            background-color: var(--primary);
+         }
+
+         @container style(--state: warning) {
+            background-color: var(--warning);
+         }
+
+         @container style(--state: danger) {
+            background-color: var(--danger);
+         }
+
+         @container style(--state: success) {
+            background-color: var(--success);
+         }
     }
 `;
