@@ -18,7 +18,7 @@ export default css`
 
     .progress {
         background-color: var(--progress-bar-bg-color);
-        border: var(--component-border, none);
+        border: var(--progress-bar-border, none);
         border-radius: 4px;
         height: 12px;
         width: 100%;

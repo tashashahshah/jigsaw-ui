@@ -22,7 +22,7 @@ export class JGModal extends LitElement {
 
         :host {
             --overlay-color: rgba(0, 0, 0, .7);
-            --modal-bg-color: var(--component-bg, #fff);
+            --modal-bg-color: var(--bg-modal-color, var(--bg-color-l1));
         }
 
         .overlay {
@@ -38,10 +38,10 @@ export class JGModal extends LitElement {
 
         .modal {
             background-color: var(--modal-bg-color);
-            border: var(--component-border, none);
+            border: var(--modal-border, none);
             border-radius: .5rem;
-            box-shadow: var(--component-shadow, 0 0 22px rgba(0, 0, 0, .8));
-            color: var(--component-color, inherit);
+            box-shadow: var(--modal-shadow, 0 0 22px rgba(0, 0, 0, .8));
+            color: var(--modal-color, inherit);
             padding: 1.5rem;
             max-width: 640px;
             width: 80%;
@@ -56,14 +56,14 @@ export class JGModal extends LitElement {
         }
 
         .modal__header jg-icon {
-            background-color: var(--interactive-bg, #fff);
+            background-color: var(--modal-icon-bg, #fff);
             border-radius: 4px;
             cursor: pointer;
             padding: .75rem;
             transition: all .2s ease;
 
             &:hover {
-                background-color: var(--interactive-bg-hover, #ccc);
+                background-color: var(--modal-icon-bg-hover, #ccc);
             }
         }
 

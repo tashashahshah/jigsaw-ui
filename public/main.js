@@ -330,95 +330,91 @@
                 </div>
             </div>
 
-                        <div class="demo__section demo__section--palette">
-                <h2 class="section__title">Palette</h2>
+            <div class="demo__section demo__section--palette">
+                <h2 class="section__title">Palette v2</h2>
                 <div class="showcase">
                     <div class="card palette-showcase" style="width: 100%;">
-                        <h2>Neutral Palette (0-1000)</h2>
+                        <h2>Palette (0-1000)</h2>
                         <div class="palette-grid">
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-white"></div>
-                                <div class="palette-label">White</div>
+                                <div class="palette-color base"></div>
+                                <div class="palette-label">base</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-50"></div>
-                                <div class="palette-label">neutral-50</div>
+                                <div class="palette-color base-1"></div>
+                                <div class="palette-label">base-1</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-100"></div>
-                                <div class="palette-label">neutral-100</div>
+                                <div class="palette-color base-2"></div>
+                                <div class="palette-label">base-2</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-150"></div>
-                                <div class="palette-label">neutral-150</div>
+                                <div class="palette-color base-3"></div>
+                                <div class="palette-label">base-3</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-200"></div>
-                                <div class="palette-label">neutral-200</div>
+                                <div class="palette-color base-4"></div>
+                                <div class="palette-label">base-4</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-250"></div>
-                                <div class="palette-label">neutral-250</div>
+                                <div class="palette-color base-5"></div>
+                                <div class="palette-label">base-5</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-300"></div>
-                                <div class="palette-label">neutral-300</div>
+                                <div class="palette-color base-6"></div>
+                                <div class="palette-label">base-6</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-350"></div>
-                                <div class="palette-label">neutral-350</div>
+                                <div class="palette-color base-7"></div>
+                                <div class="palette-label">base-7</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-400"></div>
-                                <div class="palette-label">neutral-400</div>
+                                <div class="palette-color base-8"></div>
+                                <div class="palette-label">base-8</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-450"></div>
-                                <div class="palette-label">neutral-450</div>
+                                <div class="palette-color base-9"></div>
+                                <div class="palette-label">base-9</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-500"></div>
-                                <div class="palette-label">neutral-500</div>
+                                <div class="palette-color base-10"></div>
+                                <div class="palette-label">base-10</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-550"></div>
-                                <div class="palette-label">neutral-550</div>
+                                <div class="palette-color base-11"></div>
+                                <div class="palette-label">base-11</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-600"></div>
-                                <div class="palette-label">neutral-600</div>
+                                <div class="palette-color base-12"></div>
+                                <div class="palette-label">base-12</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-650"></div>
-                                <div class="palette-label">neutral-650</div>
+                                <div class="palette-color base-13"></div>
+                                <div class="palette-label">base-13</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-700"></div>
-                                <div class="palette-label">neutral-700</div>
+                                <div class="palette-color base-14"></div>
+                                <div class="palette-label">base-14</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-750"></div>
-                                <div class="palette-label">neutral-750</div>
+                                <div class="palette-color base-15"></div>
+                                <div class="palette-label">base-15</div>
                             </div>  
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-800"></div>
-                                <div class="palette-label">neutral-800</div>
+                                <div class="palette-color base-16"></div>
+                                <div class="palette-label">base-16</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-850"></div>
-                                <div class="palette-label">neutral-850</div>
+                                <div class="palette-color base-17"></div>
+                                <div class="palette-label">base-17</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-900"></div>
-                                <div class="palette-label">neutral-900</div>
+                                <div class="palette-color base-18"></div>
+                                <div class="palette-label">base-18</div>
                             </div>
                             <div class="palette-swatch">
-                                <div class="palette-color neutral-950"></div>
-                                <div class="palette-label">neutral-950</div>
-                            </div>
-                            <div class="palette-swatch">
-                                <div class="palette-color black"></div>
-                                <div class="palette-label">Black</div>
+                                <div class="palette-color base-19"></div>
+                                <div class="palette-label">base-19</div>
                             </div>
                         </div>
                     </div>

@@ -23,6 +23,24 @@ export default css`
     min-height: var(--list-view-min-height, 64px);
     padding: var(--list-view-padding, 1rem);
     width: 100%;
+
+    @container style(--layer: 1) {
+      background-color: var(--list-view-bg-color, var(--bg-color-l2));
+      border: var(--list-view-border, var(--border-l2));
+      color: var(--list-view-color, var(--color-l2));
+    }
+
+    @container style(--layer: 2) {
+      background-color: var(--list-view-bg-color, var(--bg-color-l3));
+      border: var(--list-view-border, var(--border-l3));
+      color: var(--list-view-color, var(--color-l3));
+    }
+
+    @container style(--layer: 3) {
+      background-color: var(--list-view-bg-color, var(--bg-color-l1));
+      border: var(--list-view-border, var(--border-l1));
+      color: var(--list-view-color, var(--color-l1));
+    }
   }
 
   .list-view--clickable {
@@ -93,7 +111,7 @@ export default css`
   .list-view__content-text {
     font-size: var(--list-view-content-font-size, 12px);
     line-height: var(--list-view-content-line-height, 1.4);
-    color: var(--list-view-content-color, var(--neutral-60, #868e96));
+    color: var(--list-view-content-color, var(--color-l3-subtle));
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

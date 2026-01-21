@@ -36,6 +36,14 @@ export default css`
         @container style(--theme: dark) {
             --card-debug: 'Dark theme card';  
         }
+
+        @container style(--theme: neutral) {
+            --card-debug: 'Neutral theme card';  
+        }
+
+        @container style(--theme: custom) {
+            --card-debug: 'Custom theme card';  
+        }
     }
 
     .card__thumbnail {

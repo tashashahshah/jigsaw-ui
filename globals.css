@@ -23,31 +23,65 @@
     --black: #000000;
 
 
-    /* Light theme - base is white  
-.light {  
-    --base: oklch(1 0 0);  
-    --base-50: oklch(from var(--base) 0.98 c h);  
-    --base-100: oklch(from var(--base) 0.95 c h);  
-     ... decreasing lightness   
-    --base-950: oklch(from var(--base) 0.03 c h);  
-}*/ 
+
+   /*  --base: oklch(98% 0 0);  
+    --base-1: oklch(from var(--base) calc(l - (1 * .05)) calc(c - (1 * .01)) calc(h - (1 + 5)));
+    --base-2: oklch(from var(--base) calc(l - (2 * .05)) calc(c - (2 * .01)) calc(h - (2 + 5)));
+    --base-3: oklch(from var(--base) calc(l - (3 * .05)) calc(c - (3 * .01)) calc(h - (3 + 5)));
+    --base-4: oklch(from var(--base) calc(l - (4 * .05)) calc(c - (4 * .01)) calc(h - (4 + 5)));
+    --base-5: oklch(from var(--base) calc(l - (5 * .05)) calc(c - (5 * .01)) calc(h - (5 + 5)));
+    --base-6: oklch(from var(--base) calc(l - (6 * .05)) calc(c - (6 * .01)) calc(h - (6 + 5)));
+    --base-7: oklch(from var(--base) calc(l - (7 * .05)) calc(c - (7 * .01)) calc(h - (7 + 5)));
+    --base-8: oklch(from var(--base) calc(l - (8 * .05)) calc(c - (8 * .01)) calc(h - (8 + 5)));
+    --base-9: oklch(from var(--base) calc(l - (9 * .05)) calc(c - (9 * .01)) calc(h - (9 + 5)));
+    --base-10: oklch(from var(--base) calc(l - (10 * .05)) calc(c - (10 * .01)) calc(h - (10 + 5)));
+    --base-11: oklch(from var(--base) calc(l - (11 * .05)) calc(c - (11 * .01)) calc(h - (11 + 5)));
+    --base-12: oklch(from var(--base) calc(l - (12 * .05)) calc(c - (12 * .01)) calc(h - (12 + 5)));
+    --base-13: oklch(from var(--base) calc(l - (13 * .05)) calc(c - (13 * .01)) calc(h - (13 + 5)));
+    --base-14: oklch(from var(--base) calc(l - (14 * .05)) calc(c - (14 * .01)) calc(h - (14 + 5)));
+    --base-15: oklch(from var(--base) calc(l - (15 * .05)) calc(c - (15 * .01)) calc(h - (15 + 5)));
+    --base-16: oklch(from var(--base) calc(l - (16 * .05)) calc(c - (16 * .01)) calc(h - (16 + 5)));
+    --base-17: oklch(from var(--base) calc(l - (17 * .05)) calc(c - (17 * .01)) calc(h - (17 + 5)));
+    --base-18: oklch(from var(--base) calc(l - (18 * .05)) calc(c - (18 * .01)) calc(h - (18 + 5)));
+    --base-19: oklch(from var(--base) calc(l - (19 * .05)) calc(c - (19 * .01)) calc(h - (19 + 5))); */
+
+
+    
+   
+  --base: oklch(100% 0 0);
+  --base-1: oklch(0.993 0.002 256.0);
+     --base-2: oklch(0.982 0.002 256.0);
+    --base-3: oklch(0.959 0.004 256.0);
+    --base-4: oklch(0.936 0.006 256.0);
+    --base-5: oklch(0.914 0.008 256.0);
+    --base-6: oklch(0.889 0.010 256.0);
+    --base-7: oklch(0.859 0.012 256.0);
+    --base-8: oklch(0.811 0.016 256.0);
+    --base-9: oklch(0.645 0.018 256.0);
+    --base-10: oklch(0.601 0.020 256.0);
+    --base-11: oklch(0.501 0.018 256.0);
+    --base-12: oklch(0.378 0.016 256.0);
+    --base-13: oklch(0.300 0.014 256.0);  
+    --base-14: oklch(0.240 0.012 256.0);  
+    --base-15: oklch(0.190 0.010 256.0);  
+    --base-16: oklch(0.150 0.008 256.0);  
+    --base-17: oklch(0.115 0.006 256.0);  
+    --base-18: oklch(0.085 0.004 256.0);  
+    --base-19: oklch(0.055 0.002 256.0);  
+    --base-20: oklch(0.030 0.001 256.0);  
+
+    --c-base: 0.05;
+
   
-/* Dark theme - base is black  
-.dark {  
-    --base: oklch(0 0 0);  
-    --base-50: oklch(from var(--base) 0.03 c h);  
-    --base-100: oklch(from var(--base) 0.06 c h);  
-    /* ... increasing lightness ...  
-    --base-950: oklch(from var(--base) 0.98 c h);  
-}  */ 
-/*or Use a mid-tone as base
+/* Cool gray (blue-tinted) 
+--cool-gray: oklch(50% 0.02 256);
+  
+--cool-gray-10:  oklch(from var(--cool-gray) 10% c h);  
+--cool-gray-50:  oklch(from var(--cool-gray) 50% c h);  
+--cool-gray-100: oklch(from var(--cool-gray) 100% c h);  */  
 
-
---base: oklch(0.5 0 0);   mid-gray  
---base-50: oklch(from var(--base) calc(l + 0.48) c h);  /* → 0.98  
---base-500: oklch(from var(--base) calc(l + 0.10) c h); /* → 0.60  
---base-950: oklch(from var(--base) calc(l - 0.47) c h); /* → 0.03  
-  */
+/* Warm gray (orange-tinted)
+--warm-gray: oklch(50% 0.02 60);  */  
 
 
 
@@ -140,7 +174,7 @@
     --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.08);
 
     /* Layer 2  */
-    --bg-color-l2: var(--neutral);
+    --bg-color-l2: var(--white);
     --color-l2: var(--neutral-900);
     --color-l2-subtle: var(--neutral-650);
     --color-l2-muted: var(--neutral-550);
@@ -158,26 +192,106 @@
     --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.15);
 
 
-    --component-bg: var(--bg-color-l1);
+    /* --component-bg: var(--bg-color-l1);
     --component-bg-hover: var(--bg-color-l2);
     --component-bg-active: var(--bg-color-l3);
     --component-color: var(--color-l1);
     --component-color-subtle: var(--color-l1-subtle);
     --component-border: var(--border-l1);
-    --component-shadow: var(--shadow-l1);
+    --component-shadow: var(--shadow-l1); */
     
 
-    --interactive-bg: var(--bg-color-l1);
+    /* --interactive-bg: var(--bg-color-l1);
     --interactive-bg-hover: var(--bg-color-l2);
     --interactive-bg-active: var(--bg-color-l3);
     --interactive-color: var(--color-l1);
-    --interactive-border: var(--border-l1);
+    --interactive-border: var(--border-l1); */
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.base {
+    background-color: var(--base);
+}
+
+.base-1 {
+    background-color: var(--base-1);
+}
+
+.base-2 {
+    background-color: var(--base-2);
+}
+
+.base-3 {
+    background-color: var(--base-3);
+}
+
+.base-4 {
+    background-color: var(--base-4);
+}
+
+.base-5 {
+    background-color: var(--base-5);
+}
+
+.base-6 {
+    background-color: var(--base-6);
+}
+
+.base-7 {
+    background-color: var(--base-7);
+}
+
+.base-8 {
+    background-color: var(--base-8);
+}
+
+.base-9 {
+    background-color: var(--base-9);
+}
+
+.base-10 {
+    background-color: var(--base-10);
+}
+
+.base-11 {
+    background-color: var(--base-11);
+}
+
+.base-12 {
+    background-color: var(--base-12);
+}
+
+.base-13 {
+    background-color: var(--base-13);
+}
+
+.base-14 {
+    background-color: var(--base-14);
+}
+
+.base-15 {
+    background-color: var(--base-15);
+}
+
+.base-16 {
+    background-color: var(--base-16);
+}
+
+.base-17 {
+    background-color: var(--base-17);
+}
+
+.base-18 {
+    background-color: var(--base-18);
+}
+
+.base-19 {
+    background-color: var(--base-19);
 }
 
 .theme-light {
@@ -187,10 +301,10 @@
 .theme-dark {
     --theme: dark;
 
-    --neutral: oklch(0 0 0);
+    --neutral: oklch(0% 0 0);
 
     --bg-color: var(--neutral-950);
-    --color: var(--neutral);
+    --color: var(--white);
     --color-subtle: var(--neutral-400);
     --color-muted: var(--neutral-500);
     --border: 1px solid var(--neutral-750);
@@ -198,7 +312,7 @@
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
     --bg-color-l1: var(--neutral-900);
-    --color-l1: var(--neutral);
+    --color-l1: var(--white);
     --color-l1-subtle: var(--neutral-400);
     --color-l1-muted: var(--neutral-500);
     --border-l1: 1px solid var(--neutral-700);
@@ -206,7 +320,7 @@
     --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.4);
 
     --bg-color-l2: var(--neutral-800);
-    --color-l2: var(--neutral);
+    --color-l2: var(--white);
     --color-l2-subtle: var(--neutral-350);
     --color-l2-muted: var(--neutral-450);
     --border-l2: 1px solid var(--neutral-650);
@@ -214,20 +328,21 @@
     --shadow-l2: 0 4px 12px rgba(0, 0, 0, 0.5);
 
     --bg-color-l3: var(--neutral-700);
-    --color-l3: var(--neutral);
+    --color-l3: var(--white);
     --color-l3-subtle: var(--neutral-350);
     --color-l3-muted: var(--neutral-450);
     --border-l3: 1px solid var(--neutral-600);
     --border-l3-subtle: 1px solid var(--neutral-650);
     --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.6);
 
-    --component-bg-hover: var(--bg-color-l2);
+    /* --component-bg-hover: var(--bg-color-l2);
     --component-bg-active: var(--bg-color-l3);
     --interactive-bg-hover: var(--bg-color-l2);
-    --interactive-bg-active: var(--bg-color-l3);
+    --interactive-bg-active: var(--bg-color-l3); */
 }
 
 .theme-neutral {
+    --theme: neutral;
     --bg-color: var(--neutral-100);
     --color: var(--neutral-900);
     --color-subtle: var(--neutral-650);
@@ -236,7 +351,7 @@
     --border-subtle: 1px solid var(--neutral-250);
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 
-    --bg-color-l1: var(--neutral);
+    --bg-color-l1: var(--white);
     --color-l1: var(--neutral-800);
     --color-l1-subtle: var(--neutral-600);
     --color-l1-muted: var(--neutral-500);
@@ -260,13 +375,15 @@
     --border-l3-subtle: 1px solid var(--neutral-300);
     --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.12);
 
-    --component-bg-hover: var(--bg-color-l2);
+    /* --component-bg-hover: var(--bg-color-l2);
     --component-bg-active: var(--bg-color-l3);
     --interactive-bg-hover: var(--bg-color-l2);
-    --interactive-bg-active: var(--bg-color-l3);
+    --interactive-bg-active: var(--bg-color-l3); */
 }
 
 .theme-custom { 
+    --theme: custom;
+
     --bg-color: #1e0221;
     --color: #fff;
     --color-subtle: #e6b3ff;
@@ -303,9 +420,41 @@
     --component-bg-active: var(--bg-color-l3);
     --interactive-bg-hover: var(--bg-color-l2);
     --interactive-bg-active: var(--bg-color-l3); */
+
+       
+    --base: oklch(0.36 0.16 328.87);  
+
+    --base-20: oklch(from var(--base) 5%   calc(var(--c-base) + (sin(0.045 * pi) * c)) h);  
+    --base-19: oklch(from var(--base) 10%  calc(var(--c-base) + (sin(0.09 * pi) * c)) h);  
+    --base-18:  oklch(from var(--base) 15%  calc(var(--c-base) + (sin(0.135 * pi) * c)) h);  
+    --base-17:  oklch(from var(--base) 20%  calc(var(--c-base) + (sin(0.18 * pi) * c)) h);  
+    --base-16:  oklch(from var(--base) 25%  calc(var(--c-base) + (sin(0.225 * pi) * c)) h);  
+    --base-15:  oklch(from var(--base) 30%  calc(var(--c-base) + (sin(0.27 * pi) * c)) h);  
+    --base-14:  oklch(from var(--base) 35%  calc(var(--c-base) + (sin(0.315 * pi) * c)) h);  
+    --base-13:  oklch(from var(--base) 40%  calc(var(--c-base) + (sin(0.36 * pi) * c)) h);  
+    --base-12:  oklch(from var(--base) 45%  calc(var(--c-base) + (sin(0.405 * pi) * c)) h);  
+    --base-11: oklch(from var(--base) 50%  calc(var(--c-base) + (sin(0.45 * pi) * c)) h);  
+    --base-10: oklch(from var(--base) 55%  calc(var(--c-base) + (sin(0.495 * pi) * c)) h);  
+    --base-9:  oklch(from var(--base) 60%  calc(var(--c-base) + (sin(0.54 * pi) * c)) h);  
+    --base-8:  oklch(from var(--base) 65%  calc(var(--c-base) + (sin(0.585 * pi) * c)) h);  
+    --base-7:  oklch(from var(--base) 70%  calc(var(--c-base) + (sin(0.63 * pi) * c)) h);  
+    --base-6:  oklch(from var(--base) 75%  calc(var(--c-base) + (sin(0.675 * pi) * c)) h);  
+    --base-5:  oklch(from var(--base) 80%  calc(var(--c-base) + (sin(0.72 * pi) * c)) h);  
+    --base-4:  oklch(from var(--base) 85%  calc(var(--c-base) + (sin(0.765 * pi) * c)) h);  
+    --base-3:  oklch(from var(--base) 90%  calc(var(--c-base) + (sin(0.81 * pi) * c)) h);  
+    --base-2:  oklch(from var(--base) 95%  calc(var(--c-base) + (sin(0.855 * pi) * c)) h);  
+    --base-1: oklch(from var(--base) 100% calc(var(--c-base) + (sin(0.90 * pi) * c)) h);
+
+    .demo__component > .demo__section:first-child,
+    .palette-swatch:has(.palette-color.base) {
+        display: none;
+    }
+
 }
 
 .layer-1 {
+
+    --layer: 1;
     --bg-color: var(--bg-color-l1);
     --color: var(--color-l1);
     --color-subtle: var(--color-l1-subtle);
@@ -314,7 +463,7 @@
     --border-subtle: var(--border-l1-subtle);
     --shadow: var(--shadow-l1);
     
-    --component-bg: var(--bg-color-l2);
+    /* --component-bg: var(--bg-color-l2);
     --component-color: var(--color-l2);
     --component-color-subtle: var(--color-l2-subtle);
     --component-border: var(--border-l2);
@@ -322,10 +471,11 @@
     
     --interactive-bg: var(--bg-color-l2);
     --interactive-color: var(--color-l2);
-    --interactive-border: var(--border-l2);
+    --interactive-border: var(--border-l2); */
 }
 
 .layer-2 {
+    --layer: 2;
     --bg-color: var(--bg-color-l2);
     --color: var(--color-l2);
     --color-subtle: var(--color-l2-subtle);
@@ -334,7 +484,7 @@
     --border-subtle: var(--border-l2-subtle);
     --shadow: var(--shadow-l2);
     
-    --component-bg: var(--bg-color-l3);
+    /* --component-bg: var(--bg-color-l3);
     --component-color: var(--color-l3);
     --component-color-subtle: var(--color-l3-subtle);
     --component-border: var(--border-l3);
@@ -342,10 +492,11 @@
     
     --interactive-bg: var(--bg-color-l3);
     --interactive-color: var(--color-l3);
-    --interactive-border: var(--border-l3);
+    --interactive-border: var(--border-l3); */
 }
 
 .layer-3 {
+    --layer: 3;
     --bg-color: var(--bg-color-l3);
     --color: var(--color-l3);
     --color-subtle: var(--color-l3-subtle);
@@ -354,7 +505,7 @@
     --border-subtle: var(--border-l3-subtle);
     --shadow: var(--shadow-l3);
 
-    --component-bg: var(--bg-color-l1);
+    /* --component-bg: var(--bg-color-l1);
     --component-color: var(--color-l1);
     --component-color-subtle: var(--color-l1-subtle);
     --component-border: var(--border-l1);
@@ -362,7 +513,7 @@
     
     --interactive-bg: var(--bg-color-l1);
     --interactive-color: var(--color-l1);
-    --interactive-border: var(--border-l1);
+    --interactive-border: var(--border-l1); */
 }
 
 html {
@@ -574,7 +725,7 @@ body {
 }
 
 .neutral-white {
-    background: var(--neutral); 
+    background: var(--white); 
 }
 
 .neutral-50 { 
@@ -654,5 +805,5 @@ body {
 }
 
 .black {
-    background: var(--neutral-999); 
+    background: var(--black); 
 }

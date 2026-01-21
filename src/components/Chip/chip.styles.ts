@@ -13,10 +13,10 @@ export default css`
     }
 
     .chip {
-        background-color: var(--chip-bg-color, var(--component-bg, #e0e0e0));
-        border: var(--chip-border, var(--component-border, none));
+        background-color: var(--chip-bg-color, var(--bg-color-l1));
+        border: var(--chip-border, none);
         border-radius: 16px;
-        color: var(--chip-color, var(--component-color, #333));
+        color: var(--chip-color, var(--color-l1));
         display: inline-block;
         padding: 6px 12px;
     }

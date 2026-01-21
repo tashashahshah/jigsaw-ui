@@ -14,10 +14,10 @@ export default css`
 
     .avatar {
         align-items: center;
-        background-color: var(--avatar-bg-color, var(--component-bg));
-        border: var(--avatar-border, var(--component-border, none));
+        background-color: var(--avatar-bg-color, var(--bg-color-l1));
+        border: var(--avatar-border, var(--border-l1));
         border-radius: 50%;
-        color: var(--avatar-color, var(--component-color));
+        color: var(--avatar-color, var(--color-l1));
         display: flex;
         font-weight: 600;
         height: var(--avatar-md-size);
